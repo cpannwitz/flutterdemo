@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import './products/product_manager.dart';
-import './textinput.dart';
 
 void main() => runApp(App());
 
@@ -8,19 +7,15 @@ class App extends StatelessWidget {
   @override
   Widget build(context) {
     return MaterialApp(
-      theme: ThemeData(
-          primarySwatch: Colors.deepOrange,
-          accentColor: Colors.deepPurpleAccent,
-          brightness: Brightness.light),
+      theme: ThemeData(primarySwatch: Colors.indigo),
       home: Scaffold(
           appBar: AppBar(
-            title: Text('Mytitle'),
+            title: Text('Products Test App'),
           ),
           body: ListView(
             addAutomaticKeepAlives: true,
             children: <Widget>[
-              TextInput(),
-              ProductManager('Food Tester'),
+              ProductManager('First Product'),
             ],
           )),
     );

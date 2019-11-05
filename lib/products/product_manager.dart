@@ -22,7 +22,7 @@ class _ProductManagerState extends State<ProductManager> {
     super.initState();
   }
 
-  void _updateProduct(String product) {
+  void _addProduct(String product) {
     setState(() {
       _products.add(product);
     });
@@ -32,7 +32,7 @@ class _ProductManagerState extends State<ProductManager> {
   Widget build(BuildContext context) {
     return Column(children: [
       Container(
-        child: ProductControl(_updateProduct),
+        child: ProductControl(_addProduct),
         margin: EdgeInsets.all(10.0),
       ),
       Products(_products)

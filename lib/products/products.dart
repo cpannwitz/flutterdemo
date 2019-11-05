@@ -9,12 +9,21 @@ class Products extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: products
-          .map((element) => Card(
-              elevation: 1.0,
-              child: Column(children: <Widget>[
-                Image.asset('assets/images/001_image.jpg'),
-                Text(element),
-              ])))
+          .map((element) => Container(
+                margin: const EdgeInsets.only(bottom: 10.0),
+                child: Card(
+                    elevation: 4.0,
+                    child: Column(children: <Widget>[
+                      Image.asset('assets/images/001_image.jpg'),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          element,
+                          style: TextStyle(fontSize: 16.0),
+                        ),
+                      ),
+                    ])),
+              ))
           .toList(),
     );
   }
